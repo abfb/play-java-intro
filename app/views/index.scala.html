@@ -1,0 +1,19 @@
+@(message: String)
+
+@main("Welcome to Play") {
+
+    <!-- @play20.welcome(message, style = "Java") -->
+
+    @message
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <script type='text/javascript' src='@routes.Assets.at("js/index.js")'></script>
+
+    <ul id="persons"></ul>
+
+    <form action="@routes.Application.addPerson()" method="post">
+        <input type="text" name="name"/>
+        <button>Add Person</button>
+    </form>
+}
